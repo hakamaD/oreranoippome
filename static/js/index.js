@@ -1,6 +1,6 @@
 $(function(){
     $(window).scroll(function (){
-        $('.fadein').each(function(){
+        $('.yimg').each(function(){
             var targetElement = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
