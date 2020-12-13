@@ -14,4 +14,4 @@ server.on('request', function(req, res)
 });
 
 // 指定したIPアドレス、ポート番号でサーバを立てる
-server.listen(80, '52.196.172.85');
+server.listen(8000, 'ip-10-0-0-33.ap-northeast-1.compute.internal');
