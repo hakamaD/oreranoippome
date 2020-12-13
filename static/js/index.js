@@ -1,3 +1,4 @@
+//fade in
 $(function(){
     $(window).scroll(function (){
         $('.yimg').each(function(){
@@ -11,4 +12,4 @@ $(function(){
         });
     });
 });
-console.log("hello?");
+
