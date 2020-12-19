@@ -40,4 +40,4 @@ server.on('request', function(req, res)
 });
 
 // 指定したIPアドレス、ポート番号でサーバを立てる
-server.listen(1337, '127.0.0.1');
+server.listen(8000);
