@@ -14,7 +14,7 @@ server.on('request', function(req, res)
         let content = url.parse(req.url, true);
 
         // .queryに配列としてパラメータとデータが入っている
-        res.write('param = ' + content.query['param']);
+        res.write('param = ' + (parseInt(content.query['param']+"",10)+parseInt(content.query['aaa']+"",10)));
         res.end();
     }
 });
