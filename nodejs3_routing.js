@@ -13,11 +13,11 @@ server.on('request', function(req, res)
     // URLに応じて読み込むファイル名を変える
     if (req.url == '/aaa')
     {
-        filename = 'aaa.html';
+        filename = 'index.html';
     }
     else if (req.url == '/bbb')
     {
-        filename = 'bbb.html';
+        filename = 'aaa.html';
     }
 
     // ファイルの読み込み
