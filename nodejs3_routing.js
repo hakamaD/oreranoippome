@@ -11,9 +11,13 @@ server.on('request', function(req, res)
     let filename = '';
 
     // URLに応じて読み込むファイル名を変える
-    if (req.url == '/')
+    if (req.url == '/aaa')
     {
-        filename = 'index.html';
+        filename = 'aaa.html';
+    }
+    else if (req.url == '/bbb')
+    {
+        filename = 'bbb.html';
     }
 
     // ファイルの読み込み
@@ -40,4 +44,4 @@ server.on('request', function(req, res)
 });
 
 // 指定したIPアドレス、ポート番号でサーバを立てる
-server.listen(8000);
+server.listen(8000, 'ip-10-0-0-33.ap-northeast-1.compute.internal');
