@@ -17,7 +17,7 @@ server.on('request', function(req, res)
     }
     else if (req.url == '/bbb')
     {
-        filename = 'aaa.html';
+        filename = 'bbb.html';
     }
 
     // ファイルの読み込み
