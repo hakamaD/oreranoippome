@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1000px, user-scalable=yes">
+<meta name="Description" content="このサイトは、一般社団法人 那須町観光協会のオフィシャルサイトです。那須町観光協会では、那須高原や那須温泉の観光情報を発信しています。ロイヤルリゾート那須とは、栃木県那須郡那須町にある那須高原や、那須温泉と呼ばれている地域の愛称です。" />
+<meta name="Keywords" content="那須,栃木県那須郡那須町,那須高原,那須温泉,ロイヤルリゾート那須,一般社団法人 那須町観光協会,旅行,観光,トレッキング" />
+<title>お問い合わせ｜那須町観光ガイド｜一般社団法人 那須町観光協会 オフィシャルサイト</title>
+
+<link rel="stylesheet" href="../common/css/normalize.css">
+<link rel="stylesheet" href="../common/css/common.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" id="font_size_css" href="../common/css/font_size_m.css">
+
+<!--[if lt IE 9]>
+<script src='//html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+<![endif]-->
+
+<script>
+	function googleTranslateElementInit() {
+		new google.translate.TranslateElement({
+			pageLanguage: 'ja',
+			includedLanguages: 'en,ko,zh-CN,zh-TW',
+			layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+		}, 'google_translate_element');
+	}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<section>
+	<div class="pankuzu_area">
+		<ol class="pankuzu_list">
+			<li><a href="../">トップ</a></li><!--
+			--><li><span>&gt;</span>お問い合わせ</li>
+		</ol>
+	</div>
+</section>
+
+<section>
+	<div class="contents_area">
+		<div class="clearfix">
+			<div id="contact" class="mian_contents">
+				<h2><img src="images/h2_01.png" alt="お問い合わせ"></h2>
+				<p class="text">下記フォームのすべての項目をご記入のうえ、送信してください。<br>
+						※携帯やスマホでキャリアメールを使用している方で、PCメールの着信拒否をされていると、<br>
+						　
+						ご返信のメールを受取ることができませんので、お問い合わせ前にメールの受信許可設定をお願いいたします。</p>
+				<div class="contact">
+					<form action="formmail.php" method="post" id="fm" name="fm">
+						<input type="hidden" name="OPT:NEED:a" value="お名前">
+						<input type="hidden" name="OPT:NEED:b" value="フリガナ">
+						<input type="hidden" name="OPT:NEED:c" value="郵便番号">
+						<input type="hidden" name="OPT:NEED:d" value="住所">
+						<input type="hidden" name="OPT:NEED:e" value="TEL">
+						<input type="hidden" name="OPT:MAILADDRESS:f" value="メールアドレス">
+						<input type="hidden" name="OPT:NEED:g" value="お問い合わせ内容">
+						<table>
+							<tr>
+								<th>お名前</th>
+								<td>
+									<input type="text" name="a" size="40" style="width:285px;">　例）那須　太郎</td>
+							</tr>
+							<tr>
+								<th>フリガナ</th>
+								<td><input type="text" name="b" size="40" style="width:285px;">　例）ナス　タロウ</td>
+							</tr>
+							<tr>
+								<th>郵便番号</th>
+								<td><input type="text" name="c" size="10" style="width:100px;" maxlength="8">　例）325-0301　※半角数字</td>
+							</tr>
+							<tr>
+								<th>住所</th>
+								<td><input type="text" name="d" size="40" style="width:285px;">　例）栃木県那須郡那須町湯本182</td>
+							</tr>
+							<tr>
+								<th>TEL</th>
+								<td><input type="text" name="e" size="40" style="width:285px;">　例）0123-45-6789　※半角数字</td>
+							</tr>
+							<tr>
+								<th>メールアドレス</th>
+								<td><input type="text" name="f" size="40" style="width:375px;">　※半角英数</td>
+							</tr>
+							<tr>
+								<th class="detail">お問い合わせ内容</th>
+								<td class="detail"><textarea rows="8" name="g" style="width:540px;height:190px;"></textarea></td>
+							</tr>
+						</table>
+						<div class="mail_btn">
+							<a href="javascript:void(0);" onClick="fm.submit();return false;"><img src="images/btn_check.png" alt="内容を確認する"></a>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+		</div>
+
+		<div class="pagetop"><a href="#container"><img src="../common/images/pagetop.png" alt="ページトップへ"></a></div>
+	</div>
+</section>
+
+
+
+</body>
+</html>
