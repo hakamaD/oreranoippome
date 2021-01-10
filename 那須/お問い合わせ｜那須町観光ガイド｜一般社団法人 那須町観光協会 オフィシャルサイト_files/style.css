@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* ===================================================================
+	use style
+=================================================================== */
+
+/*---------------------------------------------------------------------------*/
+
+#contact {
+	color:#272727;
+	font-size:108.3%;
+}
+
+#contact h2 {
+	margin-bottom:30px;
+}
+
+#contact .text {
+	margin-bottom:30px;
+}
+
+.contact {}
+
+.contact .info_text {
+	margin-bottom:40px;
+}
+
+.contact .cont_box {
+	margin-left:20px;
+	margin-top:20px;
+}
+
+.contact span.red {
+	color: #cc2a1e;
+}
+
+.contact table {
+		border-collapse: collapse;
+	border: none;
+	border-spacing: 0;
+	width:100%;
+}
+
+.contact table th {
+	background:url(../../common/images/icon_08.png) no-repeat 5px 20px;
+	border-bottom:#000 1px dotted;
+	font-size:108.3%;
+	font-weight:normal;
+	text-align:left;
+	width:150px;
+	padding-top:14px;
+	padding-bottom:14px;
+	padding-left:25px;
+}
+
+.contact table th.detail {
+	background:url(../../common/images/icon_08.png) no-repeat 5px 25px;
+	vertical-align:top;
+	padding-top:20px;
+}
+
+.contact table th.last {
+	border-bottom:none;
+}
+
+.contact table td {
+	border-bottom:#000 1px dotted;
+	font-size:108.3%;
+	padding-top:14px;
+	padding-bottom:14px;
+}
+
+.contact table td.detail {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.contact table td.last {
+	border-bottom:none;
+}
+
+.contact table td input {
+	border:#000 1px solid;
+}
+
+.contact table td textarea {
+	border:#000 1px solid;
+}
+
+.contact .mail_btn {
+	text-align:center;
+	margin-top:45px;
+}
+
+.contact ul.mail_btn2 {
+	margin:50px auto;
+	width:500px;
+}
+
+.contact ul.mail_btn2 li {
+	float:left;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+
+
+
+

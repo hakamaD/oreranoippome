@@ -1,0 +1,98 @@
+$(function(){
+	// side contents
+	$('.sub_caterogy_list').hide();
+
+	// mouse over
+	$('.img_ovr').hover(function(){
+		$(this).attr('src', $(this).attr('src').replace(/_off/ig, '_on'));
+	}, function(){
+		$(this).attr('src', $(this).attr('src').replace(/_on/ig, '_off'));
+	});
+	
+	// pagetop fadeInOut
+	$(window).scroll(function() {
+		var scrolly = $(this).scrollTop();
+		if (scrolly == 0) {
+			$('.pagetop').fadeOut('fast');
+		} else {
+			$('.pagetop').fadeIn();
+		}
+	});
+
+	// pagelink scroll
+	$('a[href^=#]').click(function(){
+		var Hash = $(this.hash);
+		if ($(Hash).offset()) {
+			var HashOffset = $(Hash).offset().top;
+			$('html,body').animate({scrollTop: HashOffset}, 1000);
+		}
+		return false;
+	});
+
+	// default font size
+	if ($.cookie('fontsize_nasukogen')) {
+		$('#font_size_css').attr({href: '../common/css/' + $.cookie('fontsize_nasukogen') + '.css'});
+		$('.select_font').children('img').attr('src', $('.select_font').children('img').attr('src').replace(/_on/ig, ''));
+		$('.font_item').children().removeClass('select_font');
+		$('#' + $.cookie('fontsize_nasukogen')).attr('src', $('#' + $.cookie('fontsize_nasukogen')).attr('src').replace(/.gif/ig, '_on.gif'));
+		$('#' + $.cookie('fontsize_nasukogen')).parent('span').addClass('select_font');
+	}
+
+	// font size change
+	$('.size_item').click(function() {
+		var cssurl= '../common/css/' + $(this).children('img').attr('id') + '.css';
+		$('#font_size_css').attr({href: cssurl});
+		$.cookie('fontsize_nasukogen', $(this).children('img').attr('id'), {
+			expires: 365,
+			path: '/'
+		});
+
+		$('.select_font').children('img').attr('src', $('.select_font').children('img').attr('src').replace(/_on/ig, ''));
+		$(this).children('img').attr('src', $(this).children('img').attr('src').replace(/.gif/ig, '_on.gif'));
+		$('.font_item').children().removeClass('select_font');
+		$(this).addClass('select_font');
+	});
+
+	// side navi move
+	$(".side_navi div").hover(function(){
+		$(this).stop(true, false).animate({marginLeft: "-132px"}, 800);
+	}, function(){
+		$(this).stop(true, false).animate({marginLeft: "0px"}, 800);
+	});
+
+	// mouse over side contents
+	$('.c_type').hover(function(){
+		if (!$(this).hasClass('select')) {
+			$('a', this).children('img').attr('src', $('a', this).children('img').attr('src').replace(/_off/ig, '_on'));
+		}
+	}, function(){
+		if (!$(this).hasClass('select')) {
+			$('a', this).children('img').attr('src', $('a', this).children('img').attr('src').replace(/_on/ig, '_off'));
+		}
+	});
+
+	// click side contents
+	$('.c_type').click(function(){
+		if($(this).next('.sub_caterogy_list').get(0)) {
+			if ($(this).next().is(':hidden')) {
+				$('.category_list > li').each(function() {
+					if ($(this).children('div').hasClass('select')) {
+						$('div a', this).children('img').attr('src', $('div a', this).children('img').attr('src').replace(/_on/ig, '_off'));
+						$(this).children('div').removeClass('select');
+					}
+				});
+				$('.sub_caterogy_list').slideUp();
+	
+				$('a', this).children('img').attr('src', $('a', this).children('img').attr('src').replace(/_off/ig, '_on'));
+				$(this).addClass('select');
+			} else {
+				$(this).removeClass('select');
+			}
+			$(this).next('.sub_caterogy_list').slideToggle();
+		} else {
+			$(this).addClass('select');
+		}
+	});
+
+
+});
